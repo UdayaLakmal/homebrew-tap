@@ -17,10 +17,12 @@ cask "grammable" do
   app "Grammable.app"
 
   # Releases are not yet notarized; clear the download quarantine so macOS opens the app.
-  # (Uses postflight because install steps have no quarantine operation. Remove once notarized.)
-  postflight do
-    system_command "/usr/bin/xattr",
-                   args: ["-dr", "com.apple.quarantine", "#{appdir}/Grammable.app"]
+  # Remove once notarized.
+  postflight_steps do
+    run "/usr/bin/xattr",
+        args:           ["-dr", "com.apple.quarantine", "{{appdir}}/Grammable.app"],
+        writable_paths: ["Grammable.app"],
+        writable_base:  :appdir
   end
 
   uninstall quit: "io.github.udayalakmal.grammable"
