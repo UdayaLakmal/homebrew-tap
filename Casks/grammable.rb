@@ -12,11 +12,12 @@ cask "grammable" do
     strategy :github_latest
   end
 
-  depends_on macos: ">= :ventura"
+  depends_on macos: :ventura
 
   app "Grammable.app"
 
   # Releases are not yet notarized; clear the download quarantine so macOS opens the app.
+  # (Uses postflight because install steps have no quarantine operation. Remove once notarized.)
   postflight do
     system_command "/usr/bin/xattr",
                    args: ["-dr", "com.apple.quarantine", "#{appdir}/Grammable.app"]

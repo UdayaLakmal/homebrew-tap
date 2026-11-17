@@ -22,3 +22,6 @@ brew uninstall --cask grammable
 ```
 
 Project: https://github.com/UdayaLakmal/Grammable
+
+> Homebrew 7 asks you to trust third-party taps once. If you see
+> "Refusing to load cask … from untrusted tap", run `brew trust udayalakmal/tap`.
