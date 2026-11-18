@@ -1,6 +1,6 @@
 cask "grammable" do
-  version "0.1.3"
-  sha256 "a6cb8763b6b8b8cee8940fa4eba775135fa4c57b2467597e10494ab34da1de67"
+  version "0.1.4"
+  sha256 "33dc16cc9fe976c99e74978301b1d1e8f93ac665dbdcb322fcf402285ba665a9"
 
   url "https://github.com/UdayaLakmal/Grammable/releases/download/v#{version}/Grammable-#{version}.zip"
   name "Grammable"
