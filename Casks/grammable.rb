@@ -1,6 +1,6 @@
 cask "grammable" do
-  version "0.1.1"
-  sha256 "6a239174ec5d67da375b693863d26236daea1db94823787cd3f0e664c8028501"
+  version "0.1.2"
+  sha256 "f984ece9460ca0c8804a7a8707edfd440c96a7220e172527ed789d98c13e2e1d"
 
   url "https://github.com/UdayaLakmal/Grammable/releases/download/v#{version}/Grammable-#{version}.zip"
   name "Grammable"
@@ -12,7 +12,7 @@ cask "grammable" do
     strategy :github_latest
   end
 
-  depends_on macos: :ventura
+  depends_on macos: :monterey
 
   app "Grammable.app"
 
